@@ -1,0 +1,93 @@
+https://www.mrpeasy.com/blog/es/control-de-stock/
+----Ejemplo----
+
+Sí, yo como que lo primordial que necesito es poder, por ejemplo, largar facturas para que los empleados puedan armar los pedidos. Eso es como lo primordial. Poder cargarle un stock donde yo pueda ponerle el precio de costo y el precio de venta. Y si existe la posibilidad que en alguna pestaña, por ejemplo tenga para poder acomodar por pueblo. Por ejemplo, que ahora que ahora no sé en un botoncito y de ahí larga opciones como frentones Pampa el infierno y bueno y los demás pueblos en donde yo pueda guardar ahí una lista de clientes. Entonces, por ejemplo yo armó la factura antes de largar pueda que la factura ya salga con el nombre del cliente y el y la zona que le corresponde. REQUERIMIENTO DE USUARIO
+
+
+Funcionalidades Principales
+Gestión de Facturas:
+
+Crear nueva factura
+
+Listar facturas
+
+Ver detalles de la factura
+
+Generar PDF de la factura
+
+Autocompletar datos del cliente y la zona en la factura
+
+Gestión de Stock:
+
+Cargar stock
+
+Actualizar stock
+
+Ver niveles de stock
+
+Colocar precio de costo y precio de venta
+
+Gestión de Clientes:
+
+Listar clientes
+
+Ver detalles del cliente
+
+Editar cliente
+
+Eliminar cliente
+
+Filtrar clientes por pueblo
+
+Secciones del Sistema
+Dashboard:
+
+Resumen de facturas
+
+Resumen de stock
+
+Alertas de bajo stock
+
+Facturas:
+
+Crear Factura:
+
+Formulario para crear una nueva factura
+
+Selección de cliente y autocompletado de datos
+
+Selección de productos y cantidades
+
+Generación de PDF de la factura
+
+Listar Facturas:
+
+Tabla que muestra todas las facturas generadas
+
+Opciones para ver detalles, editar y eliminar facturas
+
+Stock:
+
+Listar Productos:
+
+Tabla que muestra todos los productos con sus detalles (nombre, descripción, precio de venta, precio de costo, stock actual, estado)
+
+Actualizar Stock:
+
+Formulario para actualizar las cantidades de stock de los productos
+
+Agregar Producto:
+
+Formulario para agregar un nuevo producto al inventario
+
+Clientes:
+
+Listar Clientes:
+
+Tabla que muestra todos los clientes con sus detalles (nombre, dirección, pueblo, contacto)
+
+Opciones para ver detalles, editar y eliminar clientes
+
+Filtrar por Pueblo:
+
+Botón para seleccionar un pueblo y filtrar la lista de clientes por esa ubicación

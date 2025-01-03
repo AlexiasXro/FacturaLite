@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/estilos.css">
+</head>
+<body class="font-haken bg-dark-100">
+    <div class="bg-primary-400 h-12 w-full flex items-center justify-between px-4">
+        <!-- Logo Horizontal -->
+        <div class="flex items-center space-x-2">
+          <img src="../design/LOGO-horizontal.png" alt="Logo" class="h-8 w-auto">
+        </div>
+
+        <!-- Botones de Navegación -->
+        <div class="flex space-x-2">
+          <button class="bg-white text-primary-600 px-4 py-1 rounded-md hover:bg-dark-100 focus:outline-none">
+            Atrás
+          </button>
+          <button class="bg-white text-primary-600 px-4 py-1 rounded-md hover:bg-dark-100 focus:outline-none">
+            Adelante
+          </button>
+        </div>
+      </div>
+
+ <!-- Contenedor2 -->
+ <div class="max-w-full mx-auto bg-white rounded-lg shadow-lg">
+    <!-- Navegador -->
+    <div class="border-b">
+      <nav class="flex pt-2">
+          <button class="tab-btn text-dark-600 border-t-4 border-primary-600 shadow-[2px_0px_4px_0px_rgba(0,0,0,0.25)] hover:text-blue-600 hover:bg-dark-300 hover:border-blue-600 px-3 py-6 font-medium rounded-t-lg" data-tab="producto">Cliente</button>
+        <button class="tab-btn text-complm-600  border-t-4 border-primary-600 bg-primary-100  px-3 py-2 font-medium rounded-t-lg" data-tab="cliente">Producto</button>
+        <button class="tab-btn text-dark-600 border-t-4 border-primary-600 shadow-[2px_0px_4px_0px_rgba(0,0,0,0.25)] hover:text-blue-600 hover:bg-dark-300 hover:border-blue-600 px-3 py-6 font-medium rounded-t-lg" data-tab="facturas">Facturas</button>
+        <button class="tab-btn text-dark-600 border-t-4 border-primary-600 shadow-[2px_0px_4px_0px_rgba(0,0,0,0.25)] hover:text-blue-600 hover:bg-dark-300 hover:border-blue-600 px-3 py-6 font-medium rounded-t-lg" data-tab="configuracion">Configuración</button>
+        <button class="tab-btn text-dark-600 border-t-4 border-primary-600 shadow-[2px_0px_4px_0px_rgba(0,0,0,0.25)] hover:text-blue-600 hover:bg-dark-300 hover:border-blue-600 px-3 py-6 font-medium rounded-t-lg" data-tab="ayuda">Ayuda</button>
+      </nav>
+    </div>
+
+    <!-- Contenido de la Sección -->
+    <div class="p-4 bg-primary-100">
+        <div id="" class="tab-content">
+          <div class="flex items-center justify-between ">
+            <!-- Título -->
+            <h2 class="text-xl font-bold">Sección Producto (STOCK)</h2>
+            <!-- Filtros y Barra de Búsqueda -->
+            <div class="flex items-center space-x-4">
+              <!-- Filtro de Búsqueda -->
+              <input 
+                type="text" 
+                placeholder="Buscar..." 
+                class="border border-dark-300 rounded-md p-2 w-64"
+              >
+              <!-- Filtros -->
+              <select class="border border-dark-300 rounded-md p-2">
+                <option value="">Provincia</option>
+                <option value="Chaco">Chaco</option>
+                <option value="Formosa">Formosa</option>
+                <option value="Corrientes">Corrientes</option>
+              </select>
+              <select class="border border-dark-300 rounded-md p-2">
+                <option value="">Ciudad</option>
+                <option value="Resistencia">Resistencia</option>
+                <option value="Corrientes">Corrientes</option>
+                <option value="Posadas">Posadas</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+
+  <div class="bg-dark-50 p-6">
+    <div class="flex items-center justify-between">
+      <!-- Título y Botón Nuevo Producto -->
+      <div class="flex items-center space-x-4">
+        <h2 class="text-xl font-bold">Nuevo Producto</h2>
+        <button class="flex items-center bg-blue-500 text-white px-4 py-2 rounded-md shadow hover:bg-blue-600">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 mr-2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+          </svg>
+          Crear
+        </button>
+      </div>
+  
+      <!-- Botones CSV, PDF, Imprimir -->
+      <div class="flex space-x-4">
+        <button class="flex items-center bg-dark-200 text-dark-700 px-4 py-2 rounded-md shadow hover:bg-dark-300">
+            <svg class="w-6 h-6 text-dark-700 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/>
+              </svg>
+              
+          
+          CSV
+        </button>
+        <button class="flex items-center bg-dark-200 text-dark-700 px-4 py-2 rounded-md shadow hover:bg-dark-300">
+            <svg class="w-6 h-6 text-dark-700 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 15v2a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-2m-8 1V4m0 12-4-4m4 4 4-4"/>
+              </svg>
+          PDF
+        </button>
+        <button class="flex items-center bg-dark-200 text-dark-700 px-4 py-2 rounded-md shadow hover:bg-dark-300">
+            <svg class="w-6 h-6 text-dark-700 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M16.444 18H19a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h2.556M17 11V5a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v6h10ZM7 15h10v4a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-4Z"/>
+              </svg>
+              
+          Imprimir
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-primary-100 p-2">
+    <h2 class=" font-bold mb-1">Lista de Productos</h2>
+    
+    <!-- Tabla -->
+    <div class="overflow-x-auto">
+      <table class="min-w-full table-auto">
+        <thead class="primary-100 text-left">
+          <tr>
+            <th class="px-4 py-2 border-b">Número</th>
+            <th class="px-4 py-2 border-b">Nombre</th>
+            <th class="px-4 py-2 border-b">Proveedor</th>
+            <th class="px-4 py-2 border-b">Descripción</th>
+            <th class="px-4 py-2 border-b">Categoría</th>
+            <th class="px-4 py-2 border-b">Stock Actual</th>
+            <th class="px-4 py-2 border-b">Precio Costo</th>
+            <th class="px-4 py-2 border-b">Precio Venta</th>
+            <th class="px-4 py-2 border-b">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-white">
+            <td class="px-4 py-2 border-b">1</td>
+            <td class="px-4 py-2 border-b">Producto A</td>
+            <td class="px-4 py-2 border-b">Proveedor X</td>
+            <td class="px-4 py-2 border-b">Descripción del Producto A</td>
+            <td class="px-4 py-2 border-b">Categoría 1</td>
+            <td class="px-4 py-2 border-b">100</td>
+            <td class="px-4 py-2 border-b">$10.00</td>
+            <td class="px-4 py-2 border-b">$15.00</td>
+            <td class="px-4 py-2 border-b">
+              <button class="bg-blue-500 text-white px-3 py-1 rounded-md shadow hover:bg-blue-600 mr-2">Ver</button>
+              <button class="bg-yellow-500 text-white px-3 py-1 rounded-md shadow hover:bg-yellow-600 mr-2">Editar</button>
+              <button class="bg-red-500 text-white px-3 py-1 rounded-md shadow hover:bg-red-600">Eliminar</button>
+            </td>
+          </tr>
+          <!-- Puedes agregar más filas aquí -->
+          <tr class="bg-white">
+            <td class="px-4 py-2 border-b">2</td>
+            <td class="px-4 py-2 border-b">Producto B</td>
+            <td class="px-4 py-2 border-b">Proveedor Y</td>
+            <td class="px-4 py-2 border-b">Descripción del Producto B</td>
+            <td class="px-4 py-2 border-b">Categoría 2</td>
+            <td class="px-4 py-2 border-b">50</td>
+            <td class="px-4 py-2 border-b">$8.00</td>
+            <td class="px-4 py-2 border-b">$12.00</td>
+            <td class="px-4 py-2 border-b">
+              <button class="bg-blue-500 text-white px-3 py-1 rounded-md shadow hover:bg-blue-600 mr-2">Ver</button>
+              <button class="bg-yellow-500 text-white px-3 py-1 rounded-md shadow hover:bg-yellow-600 mr-2">Editar</button>
+              <button class="bg-red-500 text-white px-3 py-1 rounded-md shadow hover:bg-red-600">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  
+
+    
+</body>
+</html>
