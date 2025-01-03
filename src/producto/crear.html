@@ -64,49 +64,49 @@
             </div>
         </div>
         <div class="container mx-auto p-6 max-w-4xl">
-            <form class=" bg-dark-200 p-6 rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-1 gap-4">
+            <form class=" bg-dark-200 p-6 rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-2 gap-4">
                 <!-- Sección de Nombre y Categoría -->
-                <div class="flex flex-col p-2  items-center">
+                <div class="flex  items-center">
                     <label for="name" class="mr-2 text-sm font-medium text-center">Nombre</label>
                     <input type="text" id="name" name="name" class="border border-dark-300 rounded-md py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
                 </div>
-                <div class="flex flex-col p-2">
+                <div class="flex  items-center p-2">
                     <label for="category" class="mr-2 text-sm font-medium text-dark-700">Categoría</label>
                     <input type="text" id="category" name="category" class="border border-dark-300 rounded-md py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
                 </div>
         
                 <!-- Sección de Precio Costo y Precio Venta -->
-                <div class="flex flex-col p-2 items-center">
+                <div class="flex items-center">
                     <label for="costPrice" class="mr-2 text-sm font-medium text-dark-700">Precio Costo</label>
                     <input type="number" id="costPrice" name="costPrice" class="border border-dark-300 rounded-md py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
                 </div>
-                <div class="flex flex-col p-2 items-center">
+                <div class="flex items-center">
                     <label for="salePrice" class="mr-2 text-sm font-medium text-dark-700">Precio Venta</label>
                     <input type="number" id="salePrice" name="salePrice" class="border border-dark-300 rounded-md py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
                     <span id="percentage" class="text-sm text-dark-500 mt-2">Aplicado: 20%</span>
                 </div>
         
                 <!-- Sección de Stock y Recargo -->
-                <div class="flex flex-col p-2 items-center">
+                <div class="flex items-center">
                     <label for="stock" class="mr-2 text-sm font-medium text-dark-700">Stock</label>
                     <input type="number" id="stock" name="stock" class="border border-dark-300 rounded-md py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
                 </div>
-                <div class="flex flex-col p-2 items-center">
+                <div class="flex items-center">
                     <label for="charge" class="mr-2 text-sm font-medium text-dark-700">Recargo</label>
                     <input type="number" id="charge" name="charge" class="border border-dark-300 rounded-md py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
         
                 <!-- Sección de Descuento y Proveedor -->
-                <div class="flex flex-col p-2 items-center">
+                <div class="flex items-center">
                     <label for="discount" class="mr-2 text-sm font-medium text-dark-700">Descuento</label>
                     <input type="number" id="discount" name="discount" class="border border-dark-300 rounded-md py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
-                <div class="flex flex-col p-2 items-center">
+                <div class="flex items-center">
                     <label for="provider" class="mr-2 text-sm font-medium text-dark-700">Proveedor</label>
                     <input type="text" id="provider" name="provider" class="border border-dark-300 rounded-md py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
                 </div>
                 
-                <div class="flex flex-col p-2 items-center">
+                <div class="flex items-center">
                     <label for="productDetail" class="mr-2 text-sm font-medium text-dark-700">Detalle del Producto</label>
                     <textarea id="productDetail" name="productDetail" rows="4" maxlength="250" class="border border-dark-300 rounded-md py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Máximo 250 caracteres"></textarea>
                     <span class="text-xs text-dark-500 mt-1">Máximo 250 caracteres</span>

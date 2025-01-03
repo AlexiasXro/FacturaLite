@@ -16,7 +16,7 @@ module.exports = {
             light: colors.zinc,
             dark: colors.zinc,
             primary: colors.pink,
-            complem: colors.Sky,
+            complem: colors.sky,
       },
     },
   },
