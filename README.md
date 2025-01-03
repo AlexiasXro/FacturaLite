@@ -33,18 +33,23 @@ Asegúrate de tener instalado lo siguiente:
 
 ## 📂 Estructura del Proyecto
 
-```plaintext
+ ```
 ├── src/
 │   ├── css/
-│   │   ├── tailwind.css   # Archivo de entrada para Tailwind
-│   │   ├── estilos.css    # Archivo generado con los estilos de Tailwind
-│   ├── index.html         # Página principal
+│   │   ├── tailwind.css   # Archivo fuente para Tailwind
+│   │   ├── estilos.css    # Archivo compilado (generado automáticamente)
 │   ├── js/
-│   │   ├── scripts.js     # Scripts personalizados (si aplica)
-├── package.json           # Configuración de npm y dependencias
-├── postcss.config.js      # Configuración de PostCSS para Tailwind
-├── tailwind.config.js     # Configuración personalizada de Tailwind
+│   │   └── app.js         # Scripts del proyecto
+│   ├── design/            # Carpeta de imágenes y logos
+│   │   └── logo.png       # Logo del proyecto
+│   └── index.html         # Página principal
+│   └── style-guide.md     # Documentación del estilo
+├── node_modules/          # Dependencias instaladas
+├── package.json           # Configuración del proyecto
+├── tailwind.config.js     # Configuración de Tailwind
 └── README.md              # Documentación del proyecto
+ ```
+
 
 
 
