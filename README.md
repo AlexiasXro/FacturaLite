@@ -33,7 +33,7 @@ Asegúrate de tener instalado lo siguiente:
 
 ## 📂 Estructura del Proyecto
 
-
+ ```
 ├── src/
 │   ├── css/
 │   │   ├── tailwind.css   # Archivo fuente para Tailwind
@@ -48,7 +48,7 @@ Asegúrate de tener instalado lo siguiente:
 ├── package.json           # Configuración del proyecto
 ├── tailwind.config.js     # Configuración de Tailwind
 └── README.md              # Documentación del proyecto
-
+ ```
 
 
 
