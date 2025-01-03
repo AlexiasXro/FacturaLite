@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../src/css/estilos.css">
+</head>
+
+<body class="font-haken bg-dark-100">
+    <div class="bg-primary-400 h-12 w-full flex items-center justify-between px-4">
+        <!-- Logo Horizontal -->
+        <div class="flex items-center space-x-2">
+            <img src="../../design/LOGO.png" alt="Logo" class="h-8 w-auto">
+        </div>
+
+        <!-- Botones de Navegación -->
+        <div class="flex space-x-2">
+            <button class="bg-dark-50 text-primary-600 px-4 py-1 rounded-md hover:bg-dark-100 focus:outline-none">
+                Atrás
+            </button>
+            <button class="bg-dark-50 text-primary-600 px-4 py-1 rounded-md hover:bg-dark-100 focus:outline-none">
+                Adelante
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenedor2 -->
+    <div class="max-w-full mx-auto bg-dark-50 rounded-lg shadow-lg">
+        <!-- Navegador -->
+        <div class="border-b">
+            <nav class="flex pt-2">
+                <button
+                    class="tab-btn text-dark-600 border-t-4 border-primary-600 shadow-[2px_0px_4px_0px_rgba(0,0,0,0.25)] hover:text-blue-600 hover:bg-dark-300 hover:border-blue-600 px-3 py-6 font-medium rounded-t-lg"
+                    data-tab="producto">Cliente</button>
+                <button
+                    class="tab-btn text-complm-600  border-t-4 border-primary-600 bg-primary-100  px-3 py-2 font-medium rounded-t-lg"
+                    data-tab="cliente">Producto</button>
+                <button
+                    class="tab-btn text-dark-600 border-t-4 border-primary-600 shadow-[2px_0px_4px_0px_rgba(0,0,0,0.25)] hover:text-blue-600 hover:bg-dark-300 hover:border-blue-600 px-3 py-6 font-medium rounded-t-lg"
+                    data-tab="facturas">Facturas</button>
+                <button
+                    class="tab-btn text-dark-600 border-t-4 border-primary-600 shadow-[2px_0px_4px_0px_rgba(0,0,0,0.25)] hover:text-blue-600 hover:bg-dark-300 hover:border-blue-600 px-3 py-6 font-medium rounded-t-lg"
+                    data-tab="configuracion">Configuración</button>
+                <button
+                    class="tab-btn text-dark-600 border-t-4 border-primary-600 shadow-[2px_0px_4px_0px_rgba(0,0,0,0.25)] hover:text-blue-600 hover:bg-dark-300 hover:border-blue-600 px-3 py-6 font-medium rounded-t-lg"
+                    data-tab="ayuda">Ayuda</button>
+            </nav>
+        </div>
+
+        <!-- Contenido de la Sección -->
+        <div class="p-4 bg-primary-100">
+            <div id="" class="tab-content">
+                <div class="flex items-center  ">
+                    <!-- Título -->
+                    <h2 class="text-xl font-bold ">Crear Producto</h2>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto p-6 max-w-4xl">
+            <form class=" bg-dark-200 p-6 rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-1 gap-4">
+                <!-- Sección de Nombre y Categoría -->
+                <div class="flex flex-col p-2  items-center">
+                    <label for="name" class="mr-2 text-sm font-medium text-center">Nombre</label>
+                    <input type="text" id="name" name="name" class="border border-dark-300 rounded-md py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="flex flex-col p-2">
+                    <label for="category" class="mr-2 text-sm font-medium text-dark-700">Categoría</label>
+                    <input type="text" id="category" name="category" class="border border-dark-300 rounded-md py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+        
+                <!-- Sección de Precio Costo y Precio Venta -->
+                <div class="flex flex-col p-2 items-center">
+                    <label for="costPrice" class="mr-2 text-sm font-medium text-dark-700">Precio Costo</label>
+                    <input type="number" id="costPrice" name="costPrice" class="border border-dark-300 rounded-md py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="flex flex-col p-2 items-center">
+                    <label for="salePrice" class="mr-2 text-sm font-medium text-dark-700">Precio Venta</label>
+                    <input type="number" id="salePrice" name="salePrice" class="border border-dark-300 rounded-md py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    <span id="percentage" class="text-sm text-dark-500 mt-2">Aplicado: 20%</span>
+                </div>
+        
+                <!-- Sección de Stock y Recargo -->
+                <div class="flex flex-col p-2 items-center">
+                    <label for="stock" class="mr-2 text-sm font-medium text-dark-700">Stock</label>
+                    <input type="number" id="stock" name="stock" class="border border-dark-300 rounded-md py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="flex flex-col p-2 items-center">
+                    <label for="charge" class="mr-2 text-sm font-medium text-dark-700">Recargo</label>
+                    <input type="number" id="charge" name="charge" class="border border-dark-300 rounded-md py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+        
+                <!-- Sección de Descuento y Proveedor -->
+                <div class="flex flex-col p-2 items-center">
+                    <label for="discount" class="mr-2 text-sm font-medium text-dark-700">Descuento</label>
+                    <input type="number" id="discount" name="discount" class="border border-dark-300 rounded-md py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="flex flex-col p-2 items-center">
+                    <label for="provider" class="mr-2 text-sm font-medium text-dark-700">Proveedor</label>
+                    <input type="text" id="provider" name="provider" class="border border-dark-300 rounded-md py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                
+                <div class="flex flex-col p-2 items-center">
+                    <label for="productDetail" class="mr-2 text-sm font-medium text-dark-700">Detalle del Producto</label>
+                    <textarea id="productDetail" name="productDetail" rows="4" maxlength="250" class="border border-dark-300 rounded-md py-2 px-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Máximo 250 caracteres"></textarea>
+                    <span class="text-xs text-dark-500 mt-1">Máximo 250 caracteres</span>
+                </div>
+
+                <div class="flex justify-end space-x-4 mt-6">
+                    <!-- Botón Guardar -->
+                    <button type="submit" class="flex items-center bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                          </svg>
+                          <!-- Icono de guardar -->
+                        Guardar
+                    </button>
+                
+                    <!-- Botón Cancelar -->
+                    <button type="button" class="flex items-center bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-dark-600 focus:outline-none focus:ring-2 focus:ring-dark-500">
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm7.707-3.707a1 1 0 0 0-1.414 1.414L10.586 12l-2.293 2.293a1 1 0 1 0 1.414 1.414L12 13.414l2.293 2.293a1 1 0 0 0 1.414-1.414L13.414 12l2.293-2.293a1 1 0 0 0-1.414-1.414L12 10.586 9.707 8.293Z" clip-rule="evenodd"/>
+                          </svg>
+                           <!-- Icono de cancelar -->
+                        Cancelar
+                    </button>
+                </div>
+                
+            </form>
+        </div>
+        
+        
+    </div>
+
+
+
+
+</body>
+
+</html>
