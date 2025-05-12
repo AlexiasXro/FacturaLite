@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../src/css/f-a4.css">
+    <title>Factura[xxx]</title>
+</head>
+<body>
+     <div class="invoice-container">
+        <!-- Encabezado -->
+        <header style="display: flex; justify-content: space-between; border-bottom: 1mm solid #ccc; padding-bottom: 4mm; margin-bottom: 4mm;">
+            <div>
+                <h1>Factura</h1>
+                <p>N°: <span id="invoiceNumber">F-0001</span></p>
+                <p>Fecha: <span id="invoiceDate">26/02/2025</span></p>
+            </div>
+            <div style="text-align: right;">
+                <h2>Mi Empresa S.A.</h2>
+                <p>CUIT: 30-12345678-9</p>
+                <p>Dirección: Av. Siempre Viva 123</p>
+                <p>Tel: +54 9 362 1234567</p>
+            </div>
+        </header>
+
+        <!-- Datos del Cliente -->
+        <section>
+            <h3>Datos del Cliente</h3>
+            <p>Nombre/Razón Social: <span id="clientName">Juan Pérez</span></p>
+            <p>Tipo de Factura: <span id="invoiceType">Factura A</span></p>
+            <p>Método de Pago: <span id="paymentMethod">Transferencia Bancaria</span></p>
+        </section>
+
+        <!-- Tabla de Productos -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Queso Gouda (1kg)</td>
+                    <td>2</td>
+                    <td>$1200</td>
+                    <td>$2400</td>
+                </tr>
+                <tr>
+                    <td>Salame Milán (500g)</td>
+                    <td>1</td>
+                    <td>$1500</td>
+                    <td>$1500</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Total -->
+        <div class="total">
+            <span>Total:</span>
+            <span>$3900</span>
+        </div>
+
+        <!-- Botón de impresión -->
+        <button onclick="window.print()" class="btn-print">Imprimir Factura</button>
+    </div>
+    
+</body>
+</html>

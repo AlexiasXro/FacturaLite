@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../src/css/estilos.css">
+</head>
+
+<body class="font-haken bg-dark-100 h-screen">
+    <div class="bg-primary-400 h-12 w-full flex items-center justify-between px-4">
+        <!-- Logo Horizontal -->
+        <div class="flex items-center space-x-2">
+            <img src="../../design/LOGO.png" alt="Logo" class="h-8 w-auto">
+        </div>
+
+        <!-- Botones de Navegación -->
+        <div class="flex space-x-2">
+            <button class="bg-dark-50 text-primary-600 px-4 py-1 rounded-md hover:bg-dark-100 focus:outline-none">
+                Atrás
+            </button>
+            <button class="bg-dark-50 text-primary-600 px-4 py-1 rounded-md hover:bg-dark-100 focus:outline-none">
+                Adelante
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenedor2 -->
+    <div class="max-w-full mx-auto bg-dark-50 rounded-lg shadow-lg">
+        <!-- Navegador -->
+        <div class="border-b">
+            <nav class="flex pt-2">
+
+                <button
+                    class="tab-btn text-dark-600 border-t-4 border-primary-600 shadow-[2px_0px_4px_0px_rgba(0,0,0,0.25)] hover:text-blue-600 hover:bg-dark-300 hover:border-blue-600 px-3 py-6 font-medium rounded-t-lg"
+                    data-tab="producto">Cliente</button>
+                <button
+                    class="tab-btn text-dark-600 border-t-4 border-primary-600 shadow-[2px_0px_4px_0px_rgba(0,0,0,0.25)] hover:text-blue-600 hover:bg-dark-300 hover:border-blue-600 px-3 py-6 font-medium rounded-t-lg"
+                    data-tab="facturas">Producto</button>
+                <button
+                    class="tab-btn text-complm-600  border-t-4 border-primary-600 bg-primary-100  px-3 py-2 font-medium rounded-t-lg"
+                    data-tab="cliente">Ventas</button>
+                <button
+                    class="tab-btn text-dark-600 border-t-4 border-primary-600 shadow-[2px_0px_4px_0px_rgba(0,0,0,0.25)] hover:text-blue-600 hover:bg-dark-300 hover:border-blue-600 px-3 py-6 font-medium rounded-t-lg"
+                    data-tab="configuracion">Configuración</button>
+                <button
+                    class="tab-btn text-dark-600 border-t-4 border-primary-600 shadow-[2px_0px_4px_0px_rgba(0,0,0,0.25)] hover:text-blue-600 hover:bg-dark-300 hover:border-blue-600 px-3 py-6 font-medium rounded-t-lg"
+                    data-tab="ayuda">Ayuda</button>
+
+            </nav>
+        </div>
+
+        <!-- Contenido de la Sección -->
+        <div class="p-4 bg-primary-100 ">
+            <div id="" class="tab-content">
+                <div class="flex items-center  ">
+                    <!-- Título -->
+                    <h2 class="text-xl font-bold ">
+                        Lista de Productos</h2>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="flex flex-col md:flex-row justify-around h-auto">
+            <!-- Sección de Productos -->
+            <div class="w-full md:w-3/4 bg-white border p-2 ">
+                <div class="flex items-center gap-2">
+                    <label class="text-xl font-normal">Buscar</label>
+                    <input type="text" id="searchInput" placeholder="Escribe para buscar..."
+                        class="flex-1 px-4 py-2  focus:ring focus:ring-blue-300">
+                </div>
+                <ul id="productList" class="mt-4 space-y-2 w-2/2 h-80 overflow-y-auto border p-2"></ul>
+                <!-- Lista de productos disponibles -->
+            </div>
+
+            <!-- Sección de Productos en Venta -->
+            <div class="w-full md:w-1/4 p-2 bg-white border  mt-6 md:mt-0 h-auto">
+                <h3 class="text-lg font-semibold">Productos en la venta</h3>
+                <ul id="selectedProductsList" class="space-y-2 h-80 overflow-y-auto "></ul>
+                <div class="mt-4 text-right text-lg font-bold">Total: $<span id="totalPrice">0</span></div>
+                <button id="confirmSaleBtn"
+                    class="mt-4 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600">Confirmar
+                    Venta</button>
+            </div>
+        </div>
+
+        <!-- Contenedor del formulario de facturación debajo -->
+        <div class="max-w-full mx-auto bg-white px-6 p-4 border-t-4 h-">
+            <!-- Botón de Enviar (ocupa 2 columnas en pantallas grandes) -->
+            <div class="col-span-1 md:col-span-2 flex  items-center p-1 space-x-2">
+                <h2 class="text-xl font-bold">Datos de Facturación</h2>
+                <button type="submit" class="bg-blue-500  text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+                    Generar Factura
+                </button>
+
+                <button type="submit" class="bg-blue-500  text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+                    Fiado
+                </button>
+
+                <button type="submit" class="bg-blue-500  text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+                    Remito
+                </button>
+            </div>
+
+            <form id="billingForm" class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white p-2">
+                <!-- Nombre o Empresa -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-1">A nombre de:</label>
+                    <input type="text" id="billingName" class="w-full border rounded-lg p-2"
+                        placeholder="Ej: Juan Pérez o Empresa XYZ" required>
+                </div>
+
+                <!-- Número de Factura -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-1">Número de Factura:</label>
+                    <input type="text" id="invoiceNumber" class="w-full border rounded-lg p-2" value="F-0001" readonly>
+                </div>
+
+                <!-- Tipo de Factura -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-1">Tipo de Factura:</label>
+                    <select id="invoiceType" class="w-full border rounded-lg p-2">
+                        <option value="A">Factura A</option>
+                        <option value="B">Factura B</option>
+                        <option value="C">Factura C</option>
+                    </select>
+                </div>
+
+                <!-- Métodos de Pago -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-1">Método de Pago:</label>
+                    <select id="paymentMethod" class="w-full border rounded-lg p-2">
+                        <option value="efectivo">Efectivo</option>
+                        <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                        <option value="transferencia">Transferencia Bancaria</option>
+                    </select>
+                </div>
+
+            </form>
+        </div>
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const products = [
+                { id: 1, name: 'Queso Gouda (1kg)', price: 1200 },
+                { id: 2, name: 'Salame Milán (1kg)', price: 1500 },
+                { id: 3, name: 'Jamón Crudo (1kg)', price: 1800 },
+                { id: 4, name: 'Queso Roquefort (500g)', price: 2200 },
+                { id: 5, name: 'Queso Parmesano (1kg)', price: 2500 },
+                { id: 6, name: 'Queso Cheddar (1kg)', price: 1400 },
+                { id: 7, name: 'Mortadela Italiana (1kg)', price: 1100 },
+                { id: 8, name: 'Panceta Ahumada (500g)', price: 2000 },
+                { id: 9, name: 'Chorizo Español (1kg)', price: 1600 },
+                { id: 10, name: 'Lomo Ahumado (1kg)', price: 2300 },
+                { id: 11, name: 'Salchichón Primavera (1kg)', price: 1350 },
+                { id: 12, name: 'Queso Provolone (800g)', price: 1800 },
+                { id: 13, name: 'Jamón Cocido (1kg)', price: 1300 },
+                { id: 14, name: 'Queso Azul (500g)', price: 2100 },
+                { id: 15, name: 'Longaniza Calabresa (1kg)', price: 1750 }
+            ];
+        
+            // Elementos del DOM
+            const searchInput = document.getElementById("searchInput"); 
+            const productList = document.getElementById("productList"); 
+            const selectedProductsList = document.getElementById("selectedProductsList"); 
+            const totalPriceElement = document.getElementById("totalPrice"); 
+            const confirmButton = document.getElementById("confirmSaleBtn"); 
+            const totalEnModal = document.getElementById("totalModal"); 
+        
+            let saleProducts = []; // Almacena los productos seleccionados para la venta
+            let totalVenta = 0; // Variable para almacenar el total de la venta
+        
+            function renderProductList(filter = "") {
+                productList.innerHTML = ""; 
+        
+                const filteredProducts = products.filter(p => p.name.toLowerCase().includes(filter.toLowerCase()));
+                filteredProducts.forEach(product => {
+                    const li = document.createElement("li");
+                    li.className = "p-2 hover:bg-gray-200 cursor-pointer border-b flex justify-between items-center";
+                    li.innerHTML = `<span>${product.name} - $${product.price}</span>
+                        <button class="bg-blue-500 text-white px-2 py-1 rounded add-btn" data-id="${product.id}">+</button>`;
+                    productList.appendChild(li);
+                });
+        
+                document.querySelectorAll(".add-btn").forEach(button => {
+                    button.addEventListener("click", function () {
+                        const productId = parseInt(button.dataset.id);
+                        const product = products.find(p => p.id === productId);
+                        if (product) addProductToSale(product);
+                    });
+                });
+            }
+
+            //NOSE Q ONDA
+            document.getElementById('confirmSaleBtn').addEventListener('click', function () {
+        let totalVenta = 0;
+        saleProducts.forEach(product => {
+            totalVenta += product.price * product.quantity;
+        });
+
+        // Asignamos el total al campo de totalAmount en el modal
+        document.getElementById('totalAmount').value = totalVenta.toFixed(2);
+
+        // Abrimos el modal
+        openModal();
+    });
+        
+            function addProductToSale(product) {
+                const existingProduct = saleProducts.find(p => p.id === product.id);
+                if (existingProduct) {
+                    existingProduct.quantity++;
+                } else {
+                    saleProducts.push({ ...product, quantity: 1 });
+                }
+                renderSaleProducts();
+            }
+        
+            function renderSaleProducts() {
+                selectedProductsList.innerHTML = ""; 
+                totalVenta = 0; 
+        
+                saleProducts.forEach(product => {
+                    const li = document.createElement("li");
+                    li.className = "p-2 flex justify-between border-b items-center";
+                    li.innerHTML = `<span>${product.name} ($${product.price})</span>
+                        <div class="flex items-center space-x-2">
+                            <button class="bg-gray-300 px-2 rounded decrease-btn" data-id="${product.id}">-</button>
+                            <span class="font-bold">${product.quantity}</span>
+                            <button class="bg-gray-300 px-2 rounded increase-btn" data-id="${product.id}">+</button>
+                            <span class="text-green-600 font-bold">$${product.price * product.quantity}</span>
+                            <button class="bg-red-500 text-white px-2 py-1 rounded remove-btn" data-id="${product.id}">X</button>
+                        </div>`;
+                    totalVenta += product.price * product.quantity; 
+                    selectedProductsList.appendChild(li);
+                });
+        
+                totalPriceElement.textContent = totalVenta; 
+        
+                document.querySelectorAll(".increase-btn").forEach(button => {
+                    button.addEventListener("click", function () {
+                        const productId = parseInt(button.dataset.id);
+                        const product = saleProducts.find(p => p.id === productId);
+                        if (product) product.quantity++;
+                        renderSaleProducts();
+                    });
+                });
+        
+                document.querySelectorAll(".decrease-btn").forEach(button => {
+                    button.addEventListener("click", function () {
+                        const productId = parseInt(button.dataset.id);
+                        const product = saleProducts.find(p => p.id === productId);
+                        if (product && product.quantity > 1) {
+                            product.quantity--;
+                        } else {
+                            saleProducts = saleProducts.filter(p => p.id !== productId);
+                        }
+                        renderSaleProducts();
+                    });
+                });
+        
+                document.querySelectorAll(".remove-btn").forEach(button => {
+                    button.addEventListener("click", function () {
+                        const productId = parseInt(button.dataset.id);
+                        saleProducts = saleProducts.filter(p => p.id !== productId);
+                        renderSaleProducts();
+                    });
+                });
+            }
+        
+            searchInput.addEventListener("input", function () {
+                renderProductList(searchInput.value);
+            });
+        
+            confirmButton.addEventListener("click", function () {
+                totalEnModal.textContent = totalVenta.toFixed(2);
+            });
+        
+            renderProductList(); 
+        });
+        
+        </script>
+
+        <!-- Modal -->
+        <div id="cashPaymentModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+            <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
+                <!-- Título -->
+                <h2 class="text-xl font-semibold mb-4 text-gray-700">Pago en Efectivo</h2>
+
+                <!-- Selección de Cliente -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium">Cliente:</label>
+                    <input type="text" id="searchClient" class="w-full border rounded-lg p-2"
+                        placeholder="Buscar cliente..." oninput="filterClients()">
+                    <ul id="clientList" class="bg-white border rounded-lg mt-2 max-h-32 overflow-y-auto hidden"></ul>
+                </div>
+
+                <!-- Importe Total -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium">Importe Total:</label>
+                    <input type="text" id="totalAmount" class="w-full border rounded-lg p-2 bg-gray-100" readonly>
+                </div>
+
+                <!-- Dinero Recibido -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium">Dinero Recibido:</label>
+                    <input type="number" id="receivedAmount" class="w-full border rounded-lg p-2"
+                        placeholder="Ingrese el monto recibido" oninput="calculateChange()">
+                </div>
+
+                <!-- Vuelto -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium">Vuelto:</label>
+                    <input type="text" id="changeAmount" class="w-full border rounded-lg p-2 bg-gray-100" value="0"
+                        readonly>
+                </div>
+
+                <!-- Alerta -->
+                <p id="alertMessage" class="hidden text-red-500 font-semibold mb-2">❌ Monto insuficiente</p>
+
+                <!-- Botones -->
+                <div class="flex justify-between">
+                    <button onclick="processPayment()"
+                        class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
+                        Confirmar Pago
+                    </button>
+                    <button id="creditSaleBtn" onclick="markAsCredit()"
+                        class="bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600 hidden">
+                        Marcar como Fiado
+                    </button>
+                    <button onclick="closeModal()" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">
+                        Cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let clients = ["Juan Pérez", "María Gómez", "Carlos López", "Ana Fernández"];
+
+            document.getElementById('confirmSaleBtn').addEventListener('click', function () {
+    // Usamos el totalVenta dinámico calculado en renderSaleProducts
+    let totalVenta = 0;
+    saleProducts.forEach(product => {
+        totalVenta += product.price * product.quantity;
+    });
+
+    // Asignamos el total al campo de totalAmount en el modal
+    document.getElementById('totalAmount').value = totalVenta.toFixed(2);
+
+    // Abrimos el modal
+    openModal();
+});
+
+
+            function openModal() {
+                document.getElementById('cashPaymentModal').classList.remove('hidden');
+            }
+
+            function closeModal() {
+                document.getElementById('cashPaymentModal').classList.add('hidden');
+            }
+
+            function calculateChange() {
+                let total = parseFloat(document.getElementById('totalAmount').value);
+                let received = parseFloat(document.getElementById('receivedAmount').value) || 0;
+                let change = received - total;
+
+                document.getElementById('changeAmount').value = change >= 0 ? change.toFixed(2) : '0';
+
+                let alertMessage = document.getElementById('alertMessage');
+                if (change < 0) {
+                    alertMessage.classList.remove('hidden');
+                } else {
+                    alertMessage.classList.add('hidden');
+                }
+            }
+
+            function processPayment() {
+                let total = parseFloat(document.getElementById('totalAmount').value);
+                let received = parseFloat(document.getElementById('receivedAmount').value) || 0;
+
+                if (received < total) {
+                    alert('❌ Error: El monto ingresado es insuficiente.');
+                } else {
+                    alert('✅ Pago confirmado. Vuelto: ' + (received - total).toFixed(2));
+                    closeModal();
+                }
+            }
+
+            function markAsCredit() {
+                let selectedClient = document.getElementById('searchClient').value;
+                if (selectedClient) {
+                    alert('📝 La venta ha sido marcada como Fiado para ' + selectedClient);
+                    closeModal();
+                } else {
+                    alert('⚠️ Debe seleccionar un cliente para marcar como fiado.');
+                }
+            }
+
+            function filterClients() {
+                let input = document.getElementById('searchClient').value.toLowerCase();
+                let clientList = document.getElementById('clientList');
+                clientList.innerHTML = "";
+
+                if (input === "") {
+                    clientList.classList.add('hidden');
+                    document.getElementById('creditSaleBtn').classList.add('hidden');
+                    return;
+                }
+
+                let filteredClients = clients.filter(client => client.toLowerCase().includes(input));
+                if (filteredClients.length === 0) {
+                    clientList.classList.add('hidden');
+                } else {
+                    clientList.classList.remove('hidden');
+                    filteredClients.forEach(client => {
+                        let li = document.createElement('li');
+                        li.textContent = client;
+                        li.classList.add('p-2', 'cursor-pointer', 'hover:bg-gray-200');
+                        li.onclick = function () {
+                            document.getElementById('searchClient').value = client;
+                            clientList.classList.add('hidden');
+                            document.getElementById('creditSaleBtn').classList.remove('hidden');
+                        };
+                        clientList.appendChild(li);
+                    });
+                }
+            }
+        </script>
+
+</html>

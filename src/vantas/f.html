@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="../../src/css/f-a4.css">
+    <title>Factura[xxx]</title>
+</head>
+
+<body>
+    <div class="invoice-container">
+        <div class="button-container">
+            <!-- Botones -->
+            <button onclick="window.print()" class="btn-print">Imprimir Factura</button>
+            <button onclick="downloadPDF()" class="btn-download">Descargar PDF</button>
+        </div>
+        <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1mm solid #ccc; padding-bottom: 4mm; margin-bottom: 4mm;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="logo.png" alt="Logo de la empresa" style="height: 50px;">
+                <div>
+                    <h1>Factura</h1>
+                    <p>N°: <span id="invoiceNumber">F-0001</span></p>
+                    <p>Fecha: <span id="invoiceDate">26/02/2025</span></p>
+                </div>
+            </div>
+            <div style="text-align: right;">
+                <h2>Mi Empresa S.A.</h2>
+                <p>CUIT: 30-12345678-9</p>
+                <p>Dirección: Av. Siempre Viva 123</p>
+                <p>Tel: +54 9 362 1234567</p>
+            </div>
+        </header>
+
+        <section class="invoice-section">
+            <h3>Datos del Cliente</h3>
+            <p>Nombre/Razón Social: <span id="clientName">Juan Pérez</span></p>
+            <p>Tipo de Factura: <span id="invoiceType">Factura A</span></p>
+            <p>Método de Pago: <span id="paymentMethod">Transferencia Bancaria</span></p>
+        </section>
+
+        <table border="1" cellpadding="5">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="invoiceTable">
+                <tr>
+                    <td>Queso Gouda (1kg)</td>
+                    <td>2</td>
+                    <td>$1200</td>
+                    <td>$2400</td>
+                </tr>
+                <tr>
+                    <td>Salame Milán (500g)</td>
+                    <td>1</td>
+                    <td>$1500</td>
+                    <td>$1500</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="total">
+            <span>Total:</span>
+            <span id="totalAmount">$3900</span>
+        </div>
+       
+    </div>
+
+    <script>
+        function downloadPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            doc.setFont("helvetica", "bold");
+            doc.setFontSize(18);
+            doc.text("Factura", 10, 15);
+
+            doc.setFontSize(12);
+            doc.setFont("helvetica", "normal");
+            doc.text(`Número: ${document.getElementById("invoiceNumber").innerText}`, 10, 25);
+            doc.text(`Fecha: ${document.getElementById("invoiceDate").innerText}`, 10, 35);
+
+            doc.text("Datos del Cliente:", 10, 50);
+            doc.text(`Nombre: ${document.getElementById("clientName").innerText}`, 10, 60);
+            doc.text(`Tipo de Factura: ${document.getElementById("invoiceType").innerText}`, 10, 70);
+            doc.text(`Método de Pago: ${document.getElementById("paymentMethod").innerText}`, 10, 80);
+
+            // Encabezado de tabla
+            let y = 100;
+            doc.text("Producto", 10, y);
+            doc.text("Cantidad", 80, y);
+            doc.text("Precio Unitario", 110, y);
+            doc.text("Total", 160, y);
+
+            // Agregar productos
+            const rows = document.querySelectorAll("#invoiceTable tr");
+            y += 10;
+            rows.forEach(row => {
+                const cols = row.querySelectorAll("td");
+                doc.text(cols[0].innerText, 10, y);
+                doc.text(cols[1].innerText, 80, y);
+                doc.text(cols[2].innerText, 110, y);
+                doc.text(cols[3].innerText, 160, y);
+                y += 10;
+            });
+
+            // Total
+            doc.text(`Total: ${document.getElementById("totalAmount").innerText}`, 10, y + 10);
+
+            doc.save("factura.pdf");
+        }
+    </script>
+</body>
+
+</html>

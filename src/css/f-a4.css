@@ -1,0 +1,135 @@
+body {
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.invoice-container {
+    background: white;
+    width: 210mm; /* Tamaño exacto de A4 */
+    height: 297mm; /* Altura exacta de A4 */
+    padding: 10mm;
+    box-shadow: 0 2mm 5mm rgba(0, 0, 0, 0.2);
+    border: 1mm solid #ccc;
+    border-radius: 3mm;
+    display: flex;
+    flex-direction: column;
+    
+    /* Asegurar tamaño fijo sin afectaciones */
+    max-width: 210mm;
+    max-height: 297mm;
+    min-width: 210mm;
+    min-height: 297mm;
+}
+
+h1, h2, h3 {
+    margin: 0;
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5mm;
+}
+
+/* Mantener el recuadro exterior pero quitar las líneas internas */
+#invoiceTable {
+    width: 100%;
+    min-height: 158mm; /* Espacio para productos */
+    table-layout: fixed; /* Asegura que la tabla se ajuste correctamente */
+    border-collapse: collapse; /* Evita que los espacios interfieran */
+    padding: 5mm;
+}
+
+/* Quitar bordes internos */
+th, td {
+    border: none;
+    padding: 3mm;
+    text-align: left;
+}
+
+/* Hacer que el encabezado luzca separado sin líneas */
+th {
+    background: #f0f0f0;
+    font-weight: bold;
+}
+
+/* Total y botones */
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5mm;
+    font-size: 14pt;
+    font-weight: bold;
+    padding: 3mm;
+    background: #f0f0f0;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+    justify-content: center; /* Centrar los botones */
+    margin-top: 10px; /* Separación del contenido superior */
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: nowrap; /* Evita que los botones pasen a la siguiente línea */
+    gap: 10px; /* Espacio entre botones */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Alinear verticalmente */
+    margin-top: 10px;
+}
+
+.btn-print, .btn-download {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    white-space: nowrap; /* Evita que el texto del botón haga que se agranden */
+}
+
+.btn-print {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-download {
+    background-color: #007BFF;
+    color: white;
+}
+
+.btn-print:hover, .btn-download:hover {
+    opacity: 0.8;
+}
+
+/* Estilos para la sección de la factura */
+.invoice-section {
+    background-color: #fff;
+    
+    font-family: Arial, sans-serif;
+    border-radius: 8px;
+}
+
+.invoice-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+
+
+/* Estilos para impresión */
+@media print {
+ 
+
+   
+}
+
+
